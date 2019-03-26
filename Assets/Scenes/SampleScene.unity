@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -390,6 +390,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.91}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &218128180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 218128181}
+  - component: {fileID: 218128182}
+  m_Layer: 0
+  m_Name: GM
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &218128181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218128180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.57958, y: 6.1727486, z: -8.564444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218128182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218128180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4bcc86ced2da24aba76fd91c20fca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bases: []
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +850,7 @@ GameObject:
   - component: {fileID: 748959472}
   m_Layer: 10
   m_Name: base (1)
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -823,10 +867,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e59e1c392a7ba04789b16c88e199471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiberium: 5
+  tiberium: 0
+  baseNumber: 1
   text: {fileID: 197494989}
   fighterPrefab: {fileID: 5524477041282564756, guid: 5102c343c1a0cad468bdf261e0a627c7,
     type: 3}
+  GameManager: {fileID: 0}
 --- !u!65 &748959473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1350,7 +1396,7 @@ GameObject:
   - component: {fileID: 947435940}
   m_Layer: 10
   m_Name: base (2)
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1367,10 +1413,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e59e1c392a7ba04789b16c88e199471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiberium: 5
+  tiberium: 0
+  baseNumber: 2
   text: {fileID: 632246730}
   fighterPrefab: {fileID: 5524477041282564756, guid: 5102c343c1a0cad468bdf261e0a627c7,
     type: 3}
+  GameManager: {fileID: 0}
 --- !u!65 &947435941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1475,8 +1523,8 @@ GameObject:
   - component: {fileID: 1363778830}
   - component: {fileID: 1363778834}
   m_Layer: 10
-  m_Name: base
-  m_TagString: Untagged
+  m_Name: 'base '
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1566,10 +1614,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e59e1c392a7ba04789b16c88e199471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiberium: 5
+  tiberium: 0
+  baseNumber: 0
   text: {fileID: 782841948}
   fighterPrefab: {fileID: 5524477041282564756, guid: 5102c343c1a0cad468bdf261e0a627c7,
     type: 3}
+  GameManager: {fileID: 0}
 --- !u!54 &1363778835
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1602,7 +1652,7 @@ GameObject:
   - component: {fileID: 1606550180}
   m_Layer: 10
   m_Name: base (3)
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1619,10 +1669,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e59e1c392a7ba04789b16c88e199471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiberium: 5
+  tiberium: 9
+  baseNumber: 3
   text: {fileID: 862900976}
   fighterPrefab: {fileID: 5524477041282564756, guid: 5102c343c1a0cad468bdf261e0a627c7,
     type: 3}
+  GameManager: {fileID: 0}
 --- !u!65 &1606550181
 BoxCollider:
   m_ObjectHideFlags: 0
